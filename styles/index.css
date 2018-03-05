@@ -1,0 +1,834 @@
+@charset "UTF-8";
+
+@font-face
+{
+    font-family: "Gasrux";
+    font-weight: normal;
+    font-style: normal;
+    src : url('../fonts/Gasrux.ttf');
+}
+
+@font-face
+{
+    font-family: "Cormorant Garamond";
+    font-weight: normal;
+    font-style: normal;
+    src : url('../fonts/CormorantGaramond-Regular.ttf');
+}
+
+html
+{
+    font-size: 62.5%;
+     margin: 0;
+}
+
+body
+{
+    margin: 0;
+    background-image: url('../medias/back.PNG');
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header
+{
+    width: 100%;
+    height: 75vh;
+    background-image: url('../medias/ile-dragons.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+}
+
+header .container
+{
+    width: 62.5vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+header .container>div:nth-of-type(1) , nav
+{
+    width: 3.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+
+header .container nav>a
+{
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    margin-top:3.7vh;
+    background-image: url('../medias/burger.png');
+    background-size: 65% 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+header .container nav>a:hover{
+    background-color: rgba(255,255,255,0);
+}
+
+.hiddenNav
+{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    right: 50vw;
+    top: 4.5vh;
+    transition: all 0.1s linear;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+
+.hiddenNav a 
+{
+    line-height: 50px;
+    text-align: center;
+    display: none;
+    width: 32%;
+    text-decoration: none;
+    color: #4E4948;
+    font-size: 2rem;
+    color: #B92629;
+    float: left;
+    transition: all 0.5s linear;
+    font-family: 'Roboto Condensed' , sans-serif ;
+}
+
+header .container>nav:hover~.hiddenNav a
+{
+    display: block;
+}
+
+.hiddenNav:hover a 
+{
+    display: block;
+    line-height: 50px;
+    width:32%;
+    text-align: center;
+    color: #B92629;
+    transition: all 0.1s linear;
+}
+
+.hiddenNav a:hover
+{
+    background-color: rgba(255,255,255,0);
+    transition: all 0.3s linear;
+    color: #B92629;    
+    font-weight: bold;
+}
+header .container>nav:hover~.hiddenNav
+{    
+    width: 20vw;
+    height: 50px;
+    transition: all 0.1s linear;
+    right:50px;
+    top: 3.7vh;
+    opacity: 1;
+}
+
+.hiddenNav:hover
+{
+    width: 20vw;
+    height: 50px;
+    right: 50px;
+    top: 3.7vh;
+    opacity: 1;
+    z-index: 100;
+}
+
+header .container figure
+{
+    width: 58.5vw;
+    margin: 0;
+    margin-top:5.7vh;
+}
+
+header .container nav>a:hover .hiddenNav
+{
+    background-color: green;
+}
+
+header .container figure img
+{
+    width: 16.6vw;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+header .container figure figcaption
+{
+    text-align: center;
+    margin-top: 17.6vh;
+    font-family: 'Gasrux' , sans-serif;
+    font-size: 5rem;
+    color: #fcfcfc;
+    margin-bottom: 12.75vh;
+}
+
+.chevHaut
+{
+    width: 4vw;
+    height: 4vh;
+}
+
+.chevHaut a
+{
+    display: block;
+    background-image: url('../medias/chevronh.png');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+.chevHaut a:hover
+{
+    opacity: 1;
+}
+
+main
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main h1
+{
+    padding: 0;
+    margin: 0;
+    margin-top: 6.2vh;
+    margin-bottom: 3.75vh;
+    color: #333333;
+    font-size: 4.5rem;
+    font-family: 'Gasrux' , sans-serif;
+    text-align: center;
+}
+
+main article#histoire
+{
+    width: 53.2vw;
+    height: 33.5vh;
+    background-image: url('../medias/histoireCont.PNG');
+    background-size: 100% 100%;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 2.5vh;
+    font-size: 2rem;
+    text-align: center;
+    color: #fcfcfc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.75vh;
+    opacity: 0.9;
+}
+
+main article#histoire p
+{
+    width: 38.5vw;
+    margin-top: -0.5vh;
+}
+
+main div.branche1
+{
+    width: 56.25vw;
+    height: 10vh;
+    background-image: url('../medias/liane1.PNG');
+    background-size: 100% 100%;
+    margin-bottom: 5vh;    
+}
+
+main article#combat
+{
+    width: 53.2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 18.5vh;
+}
+
+main article#combat>div:nth-of-type(1)
+{
+    width: 25.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center; 
+}
+
+main article#combat div:nth-of-type(1) img
+{
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+    box-shadow: 1px 1px 30px #555;
+    border-radius: 3%;
+}
+
+main article#combat div:nth-of-type(2)#centralContainer
+{
+    width: 48.8%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(1)
+{   
+    height: 20vh;
+    width: 100%;
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(1) #uncharted
+{
+    width: 50%;
+    height: 100%;
+    margin-right: 49%;
+    background-image: url('../medias/bulleUnchar.PNG');
+    background-size: 100% 100%;
+    background-position: center center;
+    padding: 5%;
+    box-sizing: border-box;
+    
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(1) #uncharted p
+{
+    transform: rotateZ(8deg);
+    font-family: 'Cormorant Garamond' , sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #575351;
+}
+
+
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(3)
+{    
+    height: 20vh;
+    width: 100%;    
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(3) #heroic
+{
+    width: 50%;
+    height: 100%;
+    margin-left: 49%;
+    background-image: url('../medias/bulleHeroic.PNG');
+    background-size: 100% 100%;
+    background-position: center center;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(3) #heroic p
+{
+     transform: rotateZ(14deg);
+     font-family: 'Cormorant Garamond' , sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #575351;
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(2)
+{   
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(2) a
+{
+    width: 42.5%;
+    height: 5vh;
+    background-image: url(../medias/dialogue.png);
+    background-size: 100% 100%;
+    line-height: 5vh;
+    text-align: center;
+    font-family: 'Roboto Condensed' , sans-serif;
+    font-size: 2.7rem;
+    text-decoration: none;
+    color: #fcfcfc;
+    cursor: pointer;
+}
+
+main article#combat div:nth-of-type(2)#centralContainer div:nth-child(2) a:hover
+{
+    padding: 5px;
+    font-size: 3rem;
+}
+
+main article#combat>div:nth-of-type(3)
+{
+    width: 25.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center; 
+}
+
+main article#combat div:nth-of-type(3) img
+{
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+    box-shadow: 1px 1px 30px #555;
+    border-radius: 3%;
+}
+
+main div.branche2
+{
+    width: 56.25vw;
+    height: 10vh;
+    background-image: url('../medias/liane1.PNG');
+    background-size: 100% 100%;
+    margin-bottom: 2.6vh;
+}
+
+main article#forms
+{
+    width: 45vw;
+    height: 52vh;
+}
+
+main article#forms h3
+{
+    margin: 0;
+    padding: 0;
+    color: #595656;
+    font-size: 2.2rem;
+    font-family: 'Roboto Condensed' , sans-serif;
+    padding-bottom: 2vh;
+    width: 100%;
+}
+
+main article#forms form>input , select
+{
+    border: 0;
+    background: none;
+    width: 45%;
+    line-height: 5vh;
+    background-image: url(../medias/input.png);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: 'Roboto Condensed' , sans-serif;
+    line-height: 5vh;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 3vh;
+    color: #595556;
+}
+
+main article#forms form label
+{
+    border: 0;
+    background: none;
+    width: 45%;
+    line-height: 5vh;
+    background-image: url(../medias/input.png);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: 'Roboto Condensed' , sans-serif;
+    padding: 3%;
+    text-align: center;
+    margin: 1%;
+    color: #595556;
+    margin-top: 3.2vh;
+}
+
+main article#forms form select
+{
+    border: 0;
+    background: none;
+    width: 45%;
+    line-height: 5vh;
+    background-image: url(../medias/input.png);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    font-family: 'Roboto Condensed' , sans-serif;
+    padding: 2%;
+    text-align: center;
+    margin: 1%;
+    color: #595556;
+    margin-top: 3vh;
+}
+
+main article#forms form #send
+{
+    border: 0;
+    background: none;
+    width: 45%;
+    line-height: 5vh;
+    background-image: url(../medias/formbot.PNG);
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    font-size: 2.2rem;
+    font-family: 'Roboto Condensed' , sans-serif;
+    padding: 1%;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+main article#forms form #send:hover
+{
+    width: 48%;
+    font-size: 2.4rem;
+    line-height: 5.2vh;
+}
+
+main div.branche3
+{
+    width: 40vw;
+    height: 6.4vh;
+    background-image: url('../medias/liane1.PNG');
+    background-size: 100% 100%;
+    margin-top: 6vh;
+    margin-bottom: 3.1vh;
+    z-index: 2;
+}
+
+footer
+{
+    width: 100%;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    background-color: #373737;
+    z-index: 1;
+    border-bottom: solid 2px #141414;
+}
+
+footer div
+{
+    margin: auto;
+    width: 62.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div div#logoContFoot
+{
+    width: 5vw;
+    height: 6vh;
+}
+
+footer div div#logoContFoot img
+{
+    width: 100%;
+}
+
+footer div div#socialContFoot
+{
+    width: 13vw;
+}
+
+footer div div#socialContFoot div
+{
+    width: 6vh;
+    height: 6vh;
+    margin: 0;
+}
+
+footer div div#socialContFoot div img
+{
+    width: 100%;
+    height: 6vh;
+    display: block;
+}
+
+.lineBreak
+{
+    display: none;
+}
+
+span.formGood
+{
+    display: block;
+    position: fixed;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+span.formGood 
+{
+    position: fixed;
+    top: 10px;
+    padding: 5px;
+    right: 10px;
+    box-sizing: border-box;
+    margin-top: 2px;    
+    color: #588c10;
+    font-family: 'Roboto Condensed' , sans-serif;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+span.formGood2
+{
+    position: fixed;
+    top: 10px;
+    padding: 5px;    
+    right: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed' , sans-serif;
+    color: #588c10;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+span.formErr
+{
+    position: fixed;
+    top: 10px;
+    padding: 5px;    
+    right: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed' , sans-serif;
+    color:#B92629;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+@media all and (max-width: 1010px)
+{
+    .hiddenNav a 
+    {
+        font-size: 1.7rem;
+    }
+    
+    header .container>nav:hover~.hiddenNav
+    {    
+        width: 25vw;
+    }
+    
+    .hiddenNav:hover
+    {
+        width: 25vw;
+    }
+}
+
+
+
+@media all and (max-width: 980px)
+{
+    header
+    {
+        width: 100%;        
+        height: 50vh;
+        background-image: url('../medias/ile-dragons.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;background-size: cover;
+        background-position: center center;
+    }
+    
+    header .container figure figcaption
+    {
+        margin-top: 6vh;
+        font-size: 3.5rem;
+    }
+    
+    main article#combat div:nth-of-type(2)#centralContainer div:nth-child(2) a
+    {
+        font-size: 2rem;
+    }
+    
+    main article#histoire
+    {
+        width: 73.2vw;
+        font-size: 2rem;
+    }
+    
+    main article#histoire p
+    {
+       width: 95%;
+        padding: 5vw;
+        box-sizing: border-box;
+    }
+    
+    footer div div#socialContFoot{
+        width: 20vh;s
+    }
+    
+    header .container>nav:hover~.hiddenNav
+    {    
+        width: 60vw;
+    }
+    
+    .hiddenNav:hover
+    {
+        width: 60vw;
+    }
+    
+    .hiddenNav a 
+    {
+        background-color: rgba(255,255,255,0.6);
+        font-size: 1.5rem;
+    }
+}
+
+
+@media all and (max-width: 720px)
+{
+    main article#combat
+    {
+        width: 83.2vw;
+    }
+    
+    main article#histoire
+    {
+        width: 73.2vw;
+    }
+    
+    main article#forms
+    {
+        width: 80vw;
+    }
+    
+    header .container nav>a
+    {
+        width: 7.5vw;
+        height: 4.5vh;
+    }
+}
+
+@media all and (max-width: 620px)
+{
+    header
+    {
+        width: 100%;        
+        height: 45vh;
+        background-image: url('../medias/ile-dragons.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    header .container figure figcaption
+    {
+        margin-top: 6vh;
+        font-size: 2rem;
+    }
+    
+     main article#histoire
+    {
+        width: 95vw;
+        font-size: 1.7rem;
+    }
+    
+    main article#histoire p
+    {
+        width: 95%;
+        padding: 5vw;
+        box-sizing: border-box;
+    }
+    
+    footer div div#logoContFoot
+    {
+        display: none;
+    }
+    
+    main article#combat div:nth-of-type(2)#centralContainer div:nth-child(2) a
+    {
+        width: 70%;
+    }
+    
+    header .container figure figcaption
+    {
+        font-size: 2.5rem !important;
+    }
+    
+    main div.branche1
+    {
+        height: 4vh;
+    }
+    
+    main div.branche2
+    {
+        height: 4vh;
+    }
+    
+    main div.branche3
+    {
+        height: 2vh;
+    }
+    
+    main article#combat
+    {
+        margin-bottom: 5vh;
+    }
+    
+    main article#histoire
+    {
+        width: auto;
+        font-size: 1.5rem;
+    }
+    
+    main article#combat div:nth-of-type(2)#centralContainer div:nth-child(1) #uncharted
+    {
+        width: 70%;
+        margin-right: 29%;
+    }
+    
+    main article#combat div:nth-of-type(2)#centralContainer div:nth-child(3) #heroic
+    {
+        width: 70%;
+        margin-left: 29%;
+    }
+}
+
+@media all and (max-width: 500px)
+{
+    .lineBreak{
+        display: block;
+    }
+}
+
+
+@media all and (max-width: 330px)
+{
+     main article#histoire
+    {
+        width: 98vw;
+        font-size: 1.2rem;
+    }
+}
